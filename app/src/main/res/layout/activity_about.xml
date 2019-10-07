@@ -26,6 +26,12 @@
             android:layout_centerInParent="true"
             app:srcCompat="@drawable/ic_about_logo_icon" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutLogoIon"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/about_logo_shadow_icon"/>
     </RelativeLayout>
 
     <RelativeLayout
