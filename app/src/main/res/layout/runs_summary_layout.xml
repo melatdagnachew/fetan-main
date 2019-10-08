@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/homeSummaryIcon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/runs_summary_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/homeSummaryIcon"
+        android:layout_toRightOf="@+id/homeSummaryIcon"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/homeSummaryTimeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/home_summary_time_sample"
+            android:textColor="@color/orange"
+            android:textSize="28sp"
+            tools:text="576 mins" />
+
+        <TextView
+            android:id="@+id/homeSummaryDistanceLabel"
+            style="@style/blue_label.title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_summary_distance_sample"
+            android:textSize="40sp"
+            tools:text="28,000 m" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/homeSummaryIcon"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/blue" />
+
+</RelativeLayout>

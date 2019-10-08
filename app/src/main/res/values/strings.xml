@@ -10,6 +10,8 @@
     <string name="home_no_runs_label">No runs found\nTap \'+\' to add a new run.</string>
     <string name="home_settings_menu">Settings</string>
     <string name="home_about_menu">About</string>
+    <string name="home_summary_time_sample">576 mins</string>
+    <string name="home_summary_distance_sample">28,000 m</string>
 
     <!-- ADD RUN ACTIVITY -->
     <string name="add_run_title">Add Run</string>

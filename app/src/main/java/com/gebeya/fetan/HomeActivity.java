@@ -13,13 +13,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.gebeya.fetan.framework.base.BaseActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class HomeActivity extends BaseActivity {
 
@@ -27,9 +25,6 @@ public class HomeActivity extends BaseActivity {
 
     @BindView(R.id.homeNoRunsLabel)
     TextView noRunsLabel;
-
-    @BindView(R.id.homeAnimationView)
-    LottieAnimationView view;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,15 +52,6 @@ public class HomeActivity extends BaseActivity {
         animator.start();
     }
 
-    @OnClick(R.id.homeAnimationView)
-    public void goCrazy() {
-        final float factor = 0.1F;
-        float speed = view.getSpeed() + factor;
-        if (speed > 1.0f) speed = 1.0F;
-        view.setSpeed(speed);
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.home_menu, menu);
