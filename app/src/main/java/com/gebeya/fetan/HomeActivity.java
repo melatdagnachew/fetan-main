@@ -38,18 +38,6 @@ public class HomeActivity extends BaseActivity {
             startActivity(intent);
         });
 
-        AnimatorSet fabAnimation = (AnimatorSet) AnimatorInflater.loadAnimator(
-                this, R.animator.fab_animation
-        );
-        fabAnimation.setTarget(fab);
-        fabAnimation.start();
-
-        ObjectAnimator animator = ObjectAnimator.ofFloat(
-                noRunsLabel, "alpha", 0f, 1f
-        );
-        animator.setDuration(1000);
-        animator.setStartDelay(400);
-        animator.start();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
