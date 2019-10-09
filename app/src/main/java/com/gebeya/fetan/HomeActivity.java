@@ -41,12 +41,6 @@ public class HomeActivity extends BaseActivity {
             startActivity(intent);
         });
 
-        LayoutInflater inflater = getLayoutInflater();
-        View root = inflater.inflate(R.layout.runs_summary_layout, container, false);
-
-        TextView timeLabel = findViewById(R.id.homeSummaryTimeLabel);
-        timeLabel.setText("0 mins");
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
