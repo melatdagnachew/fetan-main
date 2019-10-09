@@ -1,7 +1,5 @@
 package com.gebeya.fetan;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -14,32 +12,35 @@ import java.util.Random;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AboutActivity extends BaseActivity {
 
     @BindView(R.id.aboutLogoIon)
-    ImageView shoeLogo;
+    ImageView logo;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         ButterKnife.bind(this);
-        animation();
+        rotate();
     }
-    public void animation(){
 
-        AnimatorSet fabAnimation = (AnimatorSet)
-                AnimatorInflater.loadAnimator(this,R.animator.fab_animation);
+    @OnClick(R.id.aboutLogoIon)
+    public void rotate() {
+        Random rand = new Random();
+        int factor = rand.nextInt(5);
+        int direction = rand.nextInt(2);
 
-        fabAnimation.setTarget(shoeLogo);
-        fabAnimation.start();
+        float size = rand.nextInt(360) + 360;
 
-        ObjectAnimator animator = ObjectAnimator.ofFloat(shoeLogo,"rotation",0,-90);
-        animator.setDuration(1500);
-        animator.setStartDelay(400);
+        float degree = size * factor;
+        degree = degree * (direction == 0 ? 1 : -1);
+        ObjectAnimator animator = ObjectAnimator.ofFloat(
+                logo, "rotation", degree
+        );
+        animator.setDuration(2000);
         animator.start();
-
     }
-
 }

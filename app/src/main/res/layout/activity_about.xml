@@ -29,9 +29,16 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:layout_below="@id/aboutLogoIon"
             android:layout_centerHorizontal="true"
             app:srcCompat="@drawable/about_logo_shadow_icon"/>
+=======
+            android:layout_below="@+id/aboutLogoIon"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/about_logo_shadow_icon" />
+
+>>>>>>> abee56ed68a43d26d066bb6e8a20b0d78b90eef2
     </RelativeLayout>
 
     <RelativeLayout

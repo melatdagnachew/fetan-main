@@ -38,6 +38,7 @@ public class HomeActivity extends BaseActivity {
             startActivity(intent);
         });
 
+<<<<<<< HEAD
         AnimatorSet fabAnimation = (AnimatorSet)
                 AnimatorInflater.loadAnimator(this,R.animator.fab_animation);
 
@@ -49,9 +50,10 @@ public class HomeActivity extends BaseActivity {
         animator.setStartDelay(400);
         animator.start();
 
+=======
+>>>>>>> abee56ed68a43d26d066bb6e8a20b0d78b90eef2
     }
 
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.home_menu, menu);

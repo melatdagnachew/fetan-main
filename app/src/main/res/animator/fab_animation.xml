@@ -2,6 +2,7 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <objectAnimator
+<<<<<<< HEAD
     android:propertyName="scaleX"
     android:duration="800"
     android:valueFrom="0"
@@ -14,4 +15,16 @@
     android:valueTo="1"/>
 
 
+=======
+        android:propertyName="scaleX"
+        android:duration="800"
+        android:valueFrom="0"
+        android:valueTo="1" />
+
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:duration="800"
+        android:valueFrom="0"
+        android:valueTo="1" />
+>>>>>>> abee56ed68a43d26d066bb6e8a20b0d78b90eef2
 </set>
