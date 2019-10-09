@@ -2,9 +2,12 @@ package com.gebeya.fetan;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,6 +26,9 @@ public class HomeActivity extends BaseActivity {
     @BindView(R.id.homeNoRunsLabel)
     TextView noRunsLabel;
 
+    @BindView(R.id.summaryContainer)
+    LinearLayout container;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,12 @@ public class HomeActivity extends BaseActivity {
             final Intent intent = new Intent(getApplicationContext(), AddRunActivity.class);
             startActivity(intent);
         });
+
+        LayoutInflater inflater = getLayoutInflater();
+        View root = inflater.inflate(R.layout.runs_summary_layout, container, false);
+
+        TextView timeLabel = findViewById(R.id.homeSummaryTimeLabel);
+        timeLabel.setText("0 mins");
 
     }
 
