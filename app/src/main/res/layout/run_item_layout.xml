@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/runItemIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/run_item_icon" />
+
+    <LinearLayout
+        android:id="@+id/runItemDataContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/runItemIcon"
+        android:layout_alignBottom="@+id/runItemIcon"
+        android:layout_toStartOf="@+id/runItemCreatedAtLabel"
+        android:layout_toLeftOf="@+id/runItemCreatedAtLabel"
+        android:layout_toEndOf="@+id/runItemIcon"
+        android:layout_toRightOf="@+id/runItemIcon"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            tools:text="15 mins" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/blue"
+            android:textSize="28sp"
+            tools:text="2,800 m" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/runItemCreatedAtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/runItemDataContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        tools:text="3 hrs ago" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/runItemDataContainer"
+        android:layout_alignStart="@+id/runItemDataContainer"
+        android:layout_alignLeft="@+id/runItemDataContainer"
+        android:layout_marginTop="16dp"
+        android:background="@color/black" />
+
+</RelativeLayout>
