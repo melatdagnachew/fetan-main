@@ -27,12 +27,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/runItemTimeLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/orange"
             tools:text="15 mins" />
 
         <TextView
+            android:id="@+id/runItemDistanceLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/blue"
